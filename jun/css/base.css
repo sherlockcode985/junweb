@@ -1,0 +1,275 @@
+/* 导航栏 */
+.custom-navbar {
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar-brand img {
+  height: 100%;
+  max-height: 56px;
+}
+
+.language-toggle,
+.contact-btn {
+  color: #333;
+  font-weight: 500;
+  padding: 0.5rem 1rem;
+}
+
+.language-toggle img {
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+  display: inline-block;
+}
+
+.language-toggle:hover,
+.contact-btn:hover {
+  color: #007bff;
+}
+
+.contact-item {
+  position: relative;
+}
+
+.contact-dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 16px;
+  min-width: 200px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  z-index: 1000;
+  text-align: center;
+}
+
+.contact-item:hover .contact-dropdown {
+  display: block;
+}
+
+
+.qr-code {
+  width: 150px;
+  height: 150px;
+  margin: 0 auto 12px;
+  background-color: #f5f5f5;
+  border: 1px dashed #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-code img {
+  width: 100%;
+  height: 100%;
+}
+
+.phone-number {
+  font-size: 14px;
+  color: #333;
+}
+
+/* ==========================================================================
+   底部 Footer 样式
+   ========================================================================== */
+.site-footer {
+  overflow: hidden;
+  /* 如果不需要整体顶部边框，可以移除 HTML 中的 border-top 类 */
+}
+
+/* 城市背景装饰图配置 */
+.footer-bg-decor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  /* 控制背景图的覆盖宽度 */
+  height: 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  opacity: 0.7;
+  /* 可根据你的背景图深浅调整透明度 */
+  z-index: 0;
+  pointer-events: none;
+}
+
+.footer-title {
+  color: #0f2e5b;
+  /* 提取自设计图的深蓝色 */
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-subtitle {
+  color: #3b7bc4;
+  /* 提取自设计图的浅蓝色 */
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+}
+
+/* 椭圆形的蓝色标签 */
+.contact-badge {
+  background-color: #3b7bc4;
+  /* 匹配设计图的标签蓝 */
+  color: #ffffff;
+  border-radius: 20px;
+  /* 胶囊形状 */
+  padding: 4px 18px;
+  font-size: 1rem;
+  margin-right: 20px;
+  min-width: 75px;
+  /* 确保所有标签宽度一致 */
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 联系文本样式 */
+.contact-text {
+  color: #1a2c4e;
+  /* 稍深的藏青色，提升文字清晰度 */
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+.qr-code-wrapper {
+  position: relative;
+  z-index: 2;
+  /* 确保二维码在背景图之上 */
+}
+
+/* ==========================================================================
+   底部 Footer 核心样式
+   ========================================================================== */
+.footer-dark {
+  background-color: #0a1d37;
+  /* 深靛蓝背景 */
+  border-top: 4px solid #1072b8;
+  /* 品牌视觉顶部线条 */
+  overflow: hidden;
+}
+
+/* 背景装饰图 */
+.footer-bg-decor {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  background-size: contain;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* 标题样式 */
+.footer-title {
+  letter-spacing: 2px;
+  font-size: 2.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.footer-subtitle {
+  letter-spacing: 2px;
+  font-weight: 300;
+  font-size: 1.4rem;
+}
+
+/* 椭圆标签：白底蓝字 */
+.contact-badge-white {
+  background-color: #ffffff;
+  color: #0a1d37;
+  border-radius: 20px;
+  padding: 3px 18px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-right: 20px;
+  min-width: 75px;
+  text-align: center;
+  white-space: nowrap;
+}
+
+/* 白色文字内容 */
+.contact-text-white {
+  color: rgba(255, 255, 255, 0.9);
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* ==========================================================================
+   底部备案号与版权区域
+   ========================================================================== */
+.footer-bottom {
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  /* 浅色分割线 */
+}
+
+.copyright-text {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.beian-info a {
+  font-size: 0.8rem;
+  transition: color 0.3s ease;
+}
+
+.beian-info a:hover {
+  color: #ffffff !important;
+}
+
+/* ==========================================================================
+   响应式适配
+   ========================================================================== */
+@media (max-width: 991.98px) {
+  .footer-bg-decor {
+    width: 100%;
+    opacity: 0.2;
+    /* 移动端减淡背景图，避免干扰文字 */
+  }
+
+  .footer-title {
+    font-size: 1.8rem;
+  }
+
+  .footer-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .contact-text-white {
+    font-size: 0.95rem;
+  }
+
+  .contact-badge-white {
+    padding: 3px 14px;
+    margin-right: 12px;
+    min-width: 65px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 575.98px) {
+
+  /* 针对极小屏幕优化间距 */
+  .contact-list .mb-3 {
+    margin-bottom: 0.8rem !important;
+  }
+
+  .contact-text-white div {
+    margin-bottom: 0.5rem;
+  }
+
+  .qr-code-wrapper img {
+    width: 120px !important;
+    height: 120px !important;
+  }
+}

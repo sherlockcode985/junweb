@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>迈途国际</title>
+  <link rel="stylesheet" href="./bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./css/base.css">
+  <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+  <!-- 导航栏部分 -->
+  <nav class="navbar navbar-expand-lg custom-navbar">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#"><img src="./img/base/logo_figama.svg" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <ul class="navbar-nav align-items-center">
+          <!-- 中英文切换 -->
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle language-toggle" href="#" role="button" data-bs-toggle="dropdown"
+              aria-expanded="false">
+              <img src="./img/base/多语言.svg" alt="">
+              语言
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="./index.html">中文</a></li>
+              <li><a class="dropdown-item" href="./index_en.html">English</a></li>
+            </ul>
+          </li>
+          <!-- 联系我们 -->
+          <li class="nav-item contact-item">
+            <a class="nav-link contact-btn" href="#">联系我们</a>
+            <div class="contact-dropdown">
+              <div class="qr-code"><img src="./img/base/微信二维码.png" alt=""></div>
+              <div class="phone-number">联系电话<br>157 2492 9311</div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- 轮播图部分 -->
+  <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="2500">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleFade" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./img/index/轮播图1.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/index/轮播图2.png" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./img/index/轮播图3.png" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+  <!-- 产品与服务 -->
+  <!-- 主要服务 -->
+  <section class="products-services py-5">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="ps-title">产品与服务</h2>
+        <p class="ps-subtitle">Products and Services</p>
+      </div>
+      <div class="row g-4">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card ps-card ps-card-1 h-100 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-body ps-card-body p-4 text-center">
+              <h5 class="card-title ps-card-title mb-3">香港 | 海外公司设立</h5>
+              <ul class="list-unstyled ps-card-list">
+                <li>-香港公司注册</li>
+                <li>-海外公司注册</li>
+                <li>-持牌秘书服务</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card ps-card ps-card-2 h-100 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-body ps-card-body p-4 text-center">
+              <h5 class="card-title ps-card-title mb-3">涉外金融服务</h5>
+              <ul class="list-unstyled ps-card-list">
+                <li>-香港银行开户</li>
+                <li>-海外银行开户</li>
+                <li>-ODI境外投资备案</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card ps-card ps-card-3 h-100 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-body ps-card-body p-4 text-center">
+              <h5 class="card-title ps-card-title mb-3">全球知识产权服务</h5>
+              <ul class="list-unstyled ps-card-list">
+                <li>-海外商标注册</li>
+                <li>-知识产权服务</li>
+                <li>-律师公证</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <div class="card ps-card ps-card-4 h-100 shadow-sm rounded-lg overflow-hidden">
+            <div class="card-body ps-card-body p-4 text-center">
+              <h5 class="card-title ps-card-title mb-3">海外身份规划</h5>
+              <ul class="list-unstyled ps-card-list">
+                <li>-香港身份咨询</li>
+                <li>-海外移民咨询</li>
+                <li>-海外留学规划</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 银行和国旗轮播图 -->
+  <section class="partners-registration py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+      <div class="row g-4 align-items-center">
+        <div class="col-lg-6">
+          <div
+            class="partner-card border rounded-3 h-100 d-flex align-items-center justify-content-center overflow-hidden">
+            <img src="./img/index/bank.png" alt="合作银行" class="img-fluid">
+          </div>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="registration-box h-100 p-4" style="background-color: #ffffff; border-radius: 8px;">
+            <h4 class="reg-title mb-4">全球公司注册</h4>
+            <div class="flag-carousel-container mb-4">
+              <div class="flag-track">
+                <img src="./img/index/finalflag.png" alt="各国国旗" class="flag-scroll-img">
+                <img src="./img/index/finalflag.png" alt="各国国旗" class="flag-scroll-img">
+              </div>
+            </div>
+            <div class="slogan-image">
+              <img src="./img/index/kaohao.png" alt="口号" class="img-fluid w-100">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 关于我们 -->
+  <section class="about-us py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-6 mb-5 mb-lg-0 pe-lg-5">
+          <h2 class="about-title">关于我们</h2>
+          <p class="about-subtitle mb-4">About Us</p>
+          <p class="about-desc">
+            迈途国际商务（MT
+            Global）是一家为国内中小企业提供出海服务的机构，以香港公司注册及商务秘书服务为基础，开拓欧美日、东南亚、南美等国家的公司注册、银行开户、年审审计、知识产权、ODI备案，FDI备案，企业出海咨询等服务，拥有数十名资深企业顾问和专业会计师团队，立足国内，辐射全球，让生意无国界，让创业更简单！
+          </p>
+        </div>
+
+        <div class="col-lg-6">
+          <div class="data-display-card p-4 p-md-5 rounded-4 shadow-lg text-white">
+            <div class="row g-4 text-center">
+              <div class="col-6">
+                <div class="data-item">
+                  <div class="data-number"><span class="counter" data-target="2000">0</span>+</div>
+                  <div class="data-text">累计合作2000多家<br>中小企业</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="data-item">
+                  <div class="data-number"><span class="counter" data-target="60">0</span>+</div>
+                  <div class="data-text">业务辐射60多个<br>国家和地区</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="data-item">
+                  <div class="data-number"><span class="counter" data-target="10">0</span>+</div>
+                  <div class="data-text">深耕国内外企业<br>服务10年</div>
+                </div>
+              </div>
+              <div class="col-6">
+                <div class="data-item">
+                  <div class="data-number"><span class="counter" data-target="100">0</span>+</div>
+                  <div class="data-text">全球100多名资深企业<br>顾问和专业会计师团队</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row align-items-stretch mt-5">
+        <div class="col-lg-6 mb-4 mb-lg-0 pe-lg-5">
+          <div class="placeholder-img-box rounded-4 overflow-hidden h-100">
+            <img src="./img/index/公司.png" alt="公司图片" class="img-fluid w-100 h-100 object-fit-cover">
+          </div>
+        </div>
+
+        <div class="col-lg-6 d-flex flex-column justify-content-between">
+          <div class="about-content flex-grow-1 d-flex flex-column">
+            <p class="about-desc mb-4">
+              迈途深耕出海服务10年，专业团队实时更新与您切身相关的资讯，帮助企业解决全球出海和跨境运营的烦恼，防范各阶段的风险，提供稳定境外架构搭建，合规手续办理服务。我们一直以来致力于为您提供更专业、更高效、更可靠的服务，为您带来更有价值的商务服务体验。
+            </p>
+
+            <div class="carousel-wrapper mt-auto">
+              <div id="aboutCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel"
+                data-bs-interval="3000">
+                <div class="carousel-inner rounded-4 overflow-hidden">
+                  <div class="carousel-item active">
+                    <img src="./img/index/etroom1.png" class="d-block w-100" alt="企业内部图片1">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/index/etroom2.jpg" class="d-block w-100" alt="企业内部图片2">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/index/etroom3.jpg" class="d-block w-100" alt="企业内部图片3">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/index/etroom4.jpg" class="d-block w-100" alt="企业内部图片4">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="./img/index/etroom5.jpg" class="d-block w-100" alt="企业内部图片5">
+                  </div>
+                </div>
+              </div>
+              <div class="carousel-tag mt-2 text-end text-muted small">
+                <span class="px-2">— 企业一角</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- 底部footer -->
+  <footer class="site-footer footer-dark position-relative pt-5 pb-3">
+    <div class="footer-bg-decor" style="background-image: url('./img/index/skyline-white.png'); opacity: 0.1;"></div>
+
+    <div class="container position-relative z-1">
+      <div class="row align-items-end">
+        <div class="col-lg-8 col-md-12 mb-4 mb-lg-0 text-white">
+          <h2 class="footer-title fw-bold text-white">联系我们</h2>
+          <p class="footer-subtitle mb-4" style="color: #8dbfff;">CONTACT US</p>
+
+          <ul class="list-unstyled contact-list mb-0">
+            <li class="d-flex align-items-center mb-3">
+              <span class="contact-badge-white">电话</span>
+              <span class="contact-text-white fs-5">157 2492 9311</span>
+            </li>
+            <li class="d-flex align-items-center mb-3">
+              <span class="contact-badge-white">邮箱</span>
+              <span class="contact-text-white fs-5">compass139@hotmail.com</span>
+            </li>
+            <li class="d-flex align-items-start">
+              <span class="contact-badge-white mt-1">地址</span>
+              <div class="contact-text-white">
+                <div class="mb-1">香港公司：香港九龙通州街111号云之端大厦911室</div>
+                <div class="mb-1">深圳公司：深圳市龙华区民治街道蓝坤大厦15楼</div>
+                <div class="mb-1">义乌公司：义乌市北苑街道丹阳街178号一楼</div>
+                <div>永康公司：永康市总部中心五洲路47号世贸南楼601室</div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="col-lg-4 col-md-12 text-lg-end text-center mt-4 mt-lg-0">
+          <div class="qr-code-wrapper d-inline-block bg-white p-2 rounded-3 shadow">
+            <img src="./img/base/微信二维码.png" alt="微信二维码" class="img-fluid"
+              style="width: 140px; height: 140px; object-fit: contain;">
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom mt-5 pt-3 border-top border-secondary text-center">
+        <div class="row">
+          <div class="col-12">
+            <p class="copyright-text mb-1">
+              &copy; 2026 迈途国际商务（MT Global Business）版权所有
+            </p>
+            <p class="beian-info mb-0">
+              <a href="https://beian.miit.gov.cn/" target="_blank" class="text-white-50 text-decoration-none mx-2">
+                粤ICP备xxxxxxxx号-1
+              </a>
+              <!-- <a href="http://www.beian.gov.cn/" target="_blank" class="text-white-50 text-decoration-none mx-2">
+                <img src="./img/base/beian_icon.png" alt=""
+                  style="width: 14px; vertical-align: middle; margin-right: 4px;">
+                粤公网安备 xxxxxxxxxxxxxx号
+              </a> -->
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="./bootstrap/bootstrap.min.js"></script>
+  <script src="./js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,502 @@
+/* 1. 设置轮播图容器的比例 */
+#carouselExampleFade {
+  width: 100%;
+  /* 设定一个你满意的宽高比，例如 21/9 (超宽) 或 16/9 (常规) */
+  aspect-ratio: 21 / 9;
+  overflow: hidden;
+}
+
+/* 2. 确保内部容器撑满这个比例空间 */
+.carousel-inner,
+.carousel-item {
+  height: 100%;
+}
+
+/* 3. 处理图片：填充并居中 */
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* 服务模块 */
+.products-services {
+  background-color: #f8f9fa;
+  /* 浅灰色背景，增加对比度 */
+}
+
+.ps-title {
+  color: #007bff;
+  /* 蓝色标题 */
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.ps-subtitle {
+  color: #6c757d;
+  /* 灰色小标题 */
+  font-size: 14px;
+  margin-bottom: 0;
+}
+
+/* 卡片基础样式 */
+.ps-card {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  border: none;
+  /* 去除卡片边框 */
+}
+
+/* 蓝色渐变叠加，确保可读性和一致性 */
+.ps-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(to bottom, rgba(0, 123, 255, 0.4) 0%, rgba(0, 123, 255, 0.7) 100%);
+  z-index: 1;
+}
+
+/* 悬停动画 */
+.ps-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* 卡片主体内容层级高于叠加层 */
+.ps-card-body {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  /* 确保在蓝色背景上的可读性 */
+}
+
+.ps-card-title {
+  font-weight: 600;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+  /* 添加一条装饰线 */
+  padding-bottom: 0.5rem;
+}
+
+.ps-card-list {
+  margin-bottom: 0;
+  font-size: 15px;
+  font-weight: 400;
+}
+
+.ps-card-list li {
+  margin-bottom: 0.5rem;
+}
+
+/* 定义背景图片占位符 */
+/* 注意：你需要创建 ./img/index/ 目录并放置以下文件 */
+/* 建议图片比例 1:1 或 4:3，蓝色调城市景观 */
+.ps-card-1 {
+  background-image: url('../img/index/service1.jpg');
+}
+
+.ps-card-2 {
+  background-image: url('../img/index/service2.jpg');
+}
+
+/* 为第二个卡片设置暖色调渐变 */
+.ps-card-2::after {
+  background-image: linear-gradient(to bottom, rgba(255, 165, 0, 0.4) 0%, rgba(255, 140, 0, 0.7) 100%);
+}
+
+.ps-card-3 {
+  background-image: url('../img/index/service3.jpg');
+}
+
+/* 为第三个卡片设置绿色调渐变 */
+.ps-card-3::after {
+  background-image: linear-gradient(to bottom, rgba(0, 128, 0, 0.4) 0%, rgba(34, 139, 34, 0.7) 100%);
+}
+
+.ps-card-4 {
+  background-image: url('../img/index/service4.jpg');
+}
+
+/* 为第四个卡片设置蓝色调渐变 */
+.ps-card-4::after {
+  background-image: linear-gradient(to bottom, rgba(0, 0, 139, 0.4) 0%, rgba(0, 0, 205, 0.7) 100%);
+}
+
+/* 合作伙伴与全球注册模块样式 */
+.partner-card {
+  background-color: #fff;
+  min-height: 200px;
+  /* 根据图片高度调整 */
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  /* 添加阴影效果 */
+}
+
+.partner-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2) !important;
+  /* 悬停时增强阴影效果 */
+}
+
+.partner-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* 确保图片充满容器 */
+}
+
+.reg-title {
+  color: #333;
+  font-weight: 600;
+  border-left: 4px solid #007bff;
+  padding-left: 15px;
+  font-size: 1.25rem;
+}
+
+/* 旗帜轮播容器 */
+.flag-carousel-container {
+  width: 100%;
+  overflow: hidden;
+  /* 隐藏超出部分 */
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* 滚动轨道 */
+.flag-track {
+  display: flex;
+  width: max-content;
+  /* 宽度由内容撑开 */
+  animation: scrollFlags 20s linear infinite;
+  /* 20秒一轮，线性无限循环 */
+}
+
+/* 鼠标经过暂停 */
+.flag-track:hover {
+  animation-play-state: paused;
+}
+
+/* 滚动图片 */
+.flag-scroll-img {
+  height: 80px;
+  /* 根据实际图片比例调整高度 */
+  width: auto;
+  display: block;
+}
+
+/* 定义滚动动画 */
+/* 原理：将整个轨道向左平移 50%，因为我们放了两张相同的长图，所以视觉上是无缝的 */
+@keyframes scrollFlags {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 移动端适配 */
+@media (max-width: 991.98px) {
+  .reg-title {
+    margin-top: 20px;
+  }
+
+  .flag-scroll-img {
+    height: 60px;
+    /* 移动端高度调小一点 */
+  }
+}
+
+
+/* 关于我们模块样式 */
+.about-us {
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-us.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-title {
+  color: #1072b8;
+  /* 提取自图片的蓝色 */
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.2rem;
+}
+
+.about-subtitle {
+  color: #1072b8;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about-desc {
+  color: #4a4a4a;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* 右侧数据展示卡片 */
+.data-display-card {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 增加卡片背景的几何装饰，使其显得更高级 */
+.data-display-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.data-item {
+  position: relative;
+  z-index: 1;
+}
+
+.data-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.data-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+/* 移动端适配 */
+@media (max-width: 767.98px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .data-number {
+    font-size: 2rem;
+  }
+
+  .data-text {
+    font-size: 0.8rem;
+  }
+}
+
+/* ==========================================================================
+   关于我们模块 - 整体样式
+   ========================================================================== */
+.about-us {
+  background-color: #ffffff;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.about-us.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-title {
+  color: #1072b8;
+  font-weight: 700;
+  font-size: 2.2rem;
+  letter-spacing: 2px;
+  margin-bottom: 0.2rem;
+}
+
+.about-subtitle {
+  color: #1072b8;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.about-desc {
+  color: #4a4a4a;
+  line-height: 1.8;
+  font-size: 1.05rem;
+  text-align: justify;
+}
+
+/* ==========================================================================
+   第一行：右侧数据展示卡片
+   ========================================================================== */
+.data-display-card {
+  background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  /* 确保在 stretch 模式下铺满 */
+}
+
+.data-display-card::after {
+  content: '';
+  position: absolute;
+  top: -50%;
+  right: -20%;
+  width: 200px;
+  height: 200px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 50%;
+  z-index: 0;
+}
+
+.data-item {
+  position: relative;
+  z-index: 1;
+}
+
+.data-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.data-text {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+}
+
+/* ==========================================================================
+   第二行：左侧图片盒子
+   ========================================================================== */
+.placeholder-img-box {
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  /* 移除固定高度，通过 align-items-stretch 由内容撑开 */
+}
+
+.about-us img.img-fluid {
+  transition: transform 0.5s ease;
+  object-fit: cover;
+}
+
+.about-us img.img-fluid:hover {
+  transform: scale(1.03);
+}
+
+/* ==========================================================================
+   第二行：右侧轮播图与“企业一角”
+   ========================================================================== */
+#aboutCarousel {
+  width: 100%;
+  /* 关键：使用比例而不是固定高度，防止宽度拉伸时高度过大 */
+  aspect-ratio: 1 / 1;
+  transition: all 0.3s ease;
+}
+
+#aboutCarousel .carousel-inner,
+#aboutCarousel .carousel-item,
+#aboutCarousel .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+/* “企业一角”小子样式 */
+.carousel-tag {
+  font-size: 0.85rem;
+  color: #888;
+  letter-spacing: 1px;
+  font-weight: 400;
+  border-right: 3px solid #1072b8;
+  /* 加个小装饰 */
+  padding-right: 10px;
+  display: inline-block;
+  float: right;
+  /* 让它靠右 */
+}
+
+#aboutCarousel:hover {
+  cursor: pointer;
+}
+
+/* ==========================================================================
+   响应式适配
+   ========================================================================== */
+
+/* 平板及大屏 (桌面端) */
+@media (min-width: 992px) {
+
+  /* 确保第二行的两列等高 */
+  .row.align-items-stretch>[class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .placeholder-img-box {
+    flex-grow: 1;
+    /* 让左侧图片铺满整个列的高度 */
+  }
+}
+
+/* 移动端 (手机) */
+@media (max-width: 767.98px) {
+  .about-title {
+    font-size: 1.8rem;
+  }
+
+  .data-number {
+    font-size: 2rem;
+  }
+
+  .data-text {
+    font-size: 0.8rem;
+  }
+
+  #aboutCarousel {
+    aspect-ratio: 3 / 2;
+    /* 手机端稍微调高一点比例 */
+  }
+
+  .placeholder-img-box {
+    min-height: 250px;
+  }
+}
+
+/* 中间尺寸适配 */
+@media (max-width: 991.98px) {
+  .about-us .mt-5 {
+    margin-top: 2.5rem !important;
+  }
+
+  .pe-lg-5 {
+    padding-right: calc(var(--bs-gutter-x) * .5) !important;
+  }
+}
+
+/* 清除浮动 */
+.carousel-wrapper::after {
+  content: "";
+  display: table;
+  clear: both;
+}
